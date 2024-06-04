@@ -1,0 +1,20 @@
+---
+---
+@import "minima";
+
+a.post-box {
+    all: unset;
+    cursor: pointer;
+
+    .post-link, link {
+        color: blue;
+    }
+
+    &:hover .post-link, &:hover .link {
+        text-decoration: underline;
+    }
+
+    &:visited .post-link, &:visited .link {
+        color: purple;
+    }
+}
