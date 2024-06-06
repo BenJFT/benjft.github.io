@@ -22,15 +22,22 @@ title: Benjft
 author: Benedict Thompson
 email: blog@benjft.uk
 description: >-
-  Some projects I've done, etc.
+  A place for ramblings and general yelling into the void
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.benjft.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  benjft
+linkedin_username: benjft
+show_excerpts: true
+excerpt_separator: <!--more-->
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -51,3 +58,10 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - .devcontainer/
+  - .git/
+  - .github/
+  - .idea/
+  - .gitignore
+  - .gitattributes

@@ -1,0 +1,41 @@
+---
+layout: home
+---
+
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+{%- if site.posts.size > 0 -%}
+    <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <a class="post-link" href="{{ post.url }}">
+            <div class="post-tile">
+                <h1>{{ post.title }}</h1>
+                <div class="content">
+                    {{ post.excerpt }}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+        <!-- Pagination links -->
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="previous btn">
+                    Previous
+                </a>
+            {% else %}
+                <span class="previous btn disabled">Previous</span>
+            {% endif %}
+                <span class="page_number ">
+                    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                </span>
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="next btn">Next</a>
+            {% else %}
+                <span class="next btn disabled">Next</span>
+            {% endif %}
+        </div>
+    {% endif %}
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+{%- endif -%}
