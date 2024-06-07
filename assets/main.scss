@@ -102,3 +102,16 @@ a.btn {
     color: unset;
   }
 }
+
+figure {
+  display: inline-block;
+  & img {
+    vertical-align: top;
+  }
+  & figcaption {
+    text-align: center;
+  }
+}
+figure img {
+  vertical-align: top;
+}
