@@ -7,11 +7,16 @@ layout: home
     <!-- This loops through the paginated posts -->
     {% for post in paginator.posts %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <a class="post-link" href="{{ post.url }}">
+        <a class="post-link" href="{{ post.url }}"> 
             <div class="post-tile">
-                <h1>{{ post.title }}</h1>
+                {% if post.thumbnail %}
+                    <img class="background" src="{{post.thumbnail}}" alt="Background Image"/>
+                {% endif %}
                 <div class="content">
-                    {{ post.excerpt }}
+                    <h1>{{ post.title }}</h1>
+                    <div class="content">
+                        {{ post.excerpt }}
+                    </div>
                 </div>
             </div>
         </a>

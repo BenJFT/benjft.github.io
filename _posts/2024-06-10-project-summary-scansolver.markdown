@@ -1,12 +1,18 @@
 ---
 title: "Project Summary: ScanSolver"
 layout: post
+bodyimage: "/assets/posts/2024-06-10-project-summary-scansolver/scanSolver.webp"
+thumbnail: "/assets/posts/2024-06-10-project-summary-scansolver/scanSolver_thumbnail.jpg"
 ---
 
 ScanSolver is a tool I made for use with the SCANSat mod in Kerbal Space Program (KSP).
 It is intended to help find optimal orbits for ground scanning satellites such that they complete the scan to 100% in teh shortest possible time.
 
 <!--more-->
+
+<figure>
+    <img src="{{page.bodyimage}}" alt="Image of a satellite in orbit with KOs terminal showing ScanSolver and the ground stacks showing on the SCANSat map"/>
+</figure>
 
 ## Background
 SCANSat is a mod that adds various ground scanning modules for satellites to KSP.
