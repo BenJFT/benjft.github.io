@@ -35,6 +35,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-katex
 
 paginate: 5
 paginate_path: "/page:num/"
